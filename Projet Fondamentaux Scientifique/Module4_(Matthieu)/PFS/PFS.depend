@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1542027380 source:c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\actions.c
+	<stdio.h>
+
+1542039042 source:c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"donnees.h"
+	"actions.h"
+
+1542033368 c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\menu.h
+
+1542039036 c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\donnees.h
+
+1542026795 c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\actions.h
+
+1542033369 source:c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542034062 source:c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\donnees.c
+	<stdio.h>
+	<stdlib.h>
+	"donnees.h"
+
