@@ -15,12 +15,12 @@ void afficherMenu(Valeurs *tabValeurs, int Taille)
     printf("taper 6 pour trier dans l'ordre croissant\n");
     printf("taper 7 pour trier dans l'ordre croissant\n");
 
-    scanf("%i\n", &choix);
+    scanf("%i", &choix);
 
     switch(choix)
     {
     case 1:
-        triCroissant(tabValeurs, Taille);
+        tri(tabValeurs, Taille);
         break;
     case 2:
         break;
