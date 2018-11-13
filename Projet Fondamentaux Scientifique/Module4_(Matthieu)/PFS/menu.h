@@ -1,6 +1,7 @@
 #ifndef MENU_H
 #define MENU_H
+#include "valeurs.h"
 
-void afficherMenu();
+void afficherMenu(Valeurs *tabValeurs, int Taille);
 
 #endif

@@ -1,38 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "menu.h"
+#include "valeurs.h"
+#include "actions.h"
 
-void afficherMenu()
+void afficherMenu(Valeurs *tabValeurs, int Taille)
 {
-	int choix; 
-	printf("taper 1 pour trier dans l'ordre croissant\n");
-	printf("taper 2 pour trier dans l'ordre croissant\n");
-	printf("taper 3 pour trier dans l'ordre croissant\n");
-	printf("taper 4 pour trier dans l'ordre croissant\n");
-	printf("taper 5 pour trier dans l'ordre croissant\n");
-	printf("taper 6 pour trier dans l'ordre croissant\n");
-	printf("taper 7 pour trier dans l'ordre croissant\n");
+    int choix;
+    printf("taper 1 pour trier dans l'ordre croissant\n");
+    printf("taper 2 pour trier dans l'ordre croissant\n");
+    printf("taper 3 pour trier dans l'ordre croissant\n");
+    printf("taper 4 pour trier dans l'ordre croissant\n");
+    printf("taper 5 pour trier dans l'ordre croissant\n");
+    printf("taper 6 pour trier dans l'ordre croissant\n");
+    printf("taper 7 pour trier dans l'ordre croissant\n");
 
-	scanf("%i\n", &choix);
+    scanf("%i\n", &choix);
 
-	switch(choix)
-	{
-		case 1:
-		break;
-		case 2:
-		break;
-		case 3:
-		break;
-		case 4:
-		break;
-		case 5:
-		break;
-		case 6:
-		break;
-		case 7:
-		break;
-		default:
-		break;
+    switch(choix)
+    {
+    case 1:
+        triCroissant(tabValeurs, Taille);
+        break;
+    case 2:
+        break;
+    case 3:
+        break;
+    case 4:
+        break;
+    case 5:
+        break;
+    case 6:
+        break;
+    case 7:
+        break;
+    default:
+        break;
 
-	}
+    }
 }

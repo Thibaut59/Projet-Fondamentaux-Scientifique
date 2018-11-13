@@ -6,9 +6,9 @@
 
 int main()
 {
-    Valeurs valeurs;
-    lireFichier(valeurs);
-	afficherMenu();
+	int Taille = compterLigne();
+	Valeurs valeurs;
+	lireFichier(valeurs, Taille);
 
-    return 0;
+	return 0;
 }
