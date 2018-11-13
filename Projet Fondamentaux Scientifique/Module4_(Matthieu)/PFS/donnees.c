@@ -20,13 +20,8 @@ void lireFichier (Valeurs valeurs, int Taille)
 			valeurs.temps = temps;
 			valeurs.poul = poul;
 			tabValeurs[i] = valeurs;
-/*			printf("%i", tabValeurs[i].temps);
-			printf("  ");
-			printf("%i\n", tabValeurs[i].poul);
-*/
 			i++;
 		}
-		//afficherFichier(tabValeurs, Taille);
 		afficherMenu(tabValeurs, Taille);
 		fclose(fichier);
 	}
