@@ -42,7 +42,6 @@ int compterLigne ()
 	{
 		compteur++;
 	}
-//	printf("nombre de ligne %i\n", compteur);
 	fclose(fichier);
 	return compteur;
 }

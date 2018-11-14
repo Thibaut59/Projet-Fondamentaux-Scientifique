@@ -1,6 +1,10 @@
 #ifndef DONNEES_H
 #define DONNEES_H
-#include "valeurs.h"
+
+typedef struct Valeurs
+{
+	int temps, poul;
+}Valeurs;
 
 void lireFichier(Valeurs valeurs, int Taille);
 int compterLigne();
