@@ -76,7 +76,7 @@ digitalWrite(8,HIGH);
 digitalWrite(9,LOW);
 digitalWrite(10,HIGH);
 digitalWrite(11,LOW);
-delay(300);
+delay(600);
 digitalWrite(2,LOW);
 digitalWrite(3,LOW);
 digitalWrite(4,LOW);
