@@ -5,16 +5,25 @@
 
 void afficherMenu(Valeurs *tabValeurs, int Taille)
 {
-    int choix;
-    printf("|---taper 1 pour trier les valeurs--------------------|\n");
-    printf("|---taper 2 pour rechercher une valeurs---------------|\n");
-    printf("|---taper 3 pour afficher la moyenne des valeurs------|\n");
-    printf("|---taper 4 pour afficher le nombre de valeurs--------|\n");
-    printf("|---taper 5 pour afficher le minimum est le maximum---|\n");
-    printf("|---taper 6 pour afficher les valeurs-----------------|\n");
+    int choix, ouiNon = 1;
 
+    while ( ouiNon != 0){
+    system("cls");
+    printf("\n");
+    printf("    ----------------------------------------------------- \n");
+    printf("   |                                                     |\n");
+    printf("   |   1. trier les valeurs                              |\n");
+    printf("   |   2. rechercher une valeurs                         |\n");
+    printf("   |   3. afficher la moyenne des valeurs                |\n");
+    printf("   |   4. afficher le nombre de valeurs                  |\n");
+    printf("   |   5. afficher le minimum est le maximum             |\n");
+    printf("   |   6. afficher les valeurs                           |\n");
+    printf("   |   0. quitter le programme                           |\n");
+    printf("   |                                                     |\n");
+    printf("    ----------------------------------------------------- \n");
+    printf("\n------------------------------------------------------------------------------------------------------------------------\n");
+    printf("\n  Entrer votre choix\n");
     scanf("%i", &choix);
-
     switch(choix)
     {
         case 1:
@@ -38,5 +47,10 @@ void afficherMenu(Valeurs *tabValeurs, int Taille)
         default:
         break;
 
+    }
+    printf("Continuez\n");
+    printf("1. Oui\n");
+    printf("0. Non\n");
+    scanf ("%i", &ouiNon);
     }
 }

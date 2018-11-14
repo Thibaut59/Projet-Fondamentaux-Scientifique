@@ -14,8 +14,8 @@ void tri(Valeurs* tabValeurs, int Taille)
     {
     case 1:
         printf("Comment voulez vous trier le fichier ? \n");
-        printf("Taper 1 pour trier de manière Croissante\n");
-        printf("Taper 2 pour trier de manière Decroissante\n");
+        printf("Taper 1 pour trier de maniere Croissante\n");
+        printf("Taper 2 pour trier de maniere Decroissante\n");
         scanf("%i",&choix);
         switch (choix)
         {
@@ -61,6 +61,7 @@ void pCroissant (Valeurs *tabValeurs, int Taille)
         tabValeurs[j] = temp;
     }
     enregistrerFichier(tabValeurs, Taille, 1);
+    printf("fichier des donnes cree\n");
 }
 
 void pDecroissant (Valeurs *tabValeurs, int Taille)
@@ -78,6 +79,7 @@ void pDecroissant (Valeurs *tabValeurs, int Taille)
         tabValeurs[j] = temp;
     }
     enregistrerFichier(tabValeurs, Taille, 2);
+    printf("fichier des donnes cree\n");
 }
 
 void tCroissant (Valeurs *tabValeurs, int Taille)
@@ -95,6 +97,7 @@ void tCroissant (Valeurs *tabValeurs, int Taille)
         tabValeurs[j] = temp;
     }
     enregistrerFichier(tabValeurs, Taille, 3);
+    printf("fichier des donnes cree\n");
 }
 
 void tDecroissant (Valeurs *tabValeurs, int Taille)
@@ -112,6 +115,7 @@ void tDecroissant (Valeurs *tabValeurs, int Taille)
         tabValeurs[j] = temp;
     }
     enregistrerFichier(tabValeurs, Taille, 4);
+    printf("fichier des donnes cree\n");
 }
 
 void afficherFichier(Valeurs* tabValeurs, int Taille)
@@ -197,17 +201,17 @@ int rechercheDonnee (Valeurs *tabValeurs, int Taille, int t)
             }
             else if ( m == tempsIndiquer)
             {
-                printf("temps = %d; poul = %d", tabValeurs[m-1].temps, tabValeurs[m-1].poul);
+                printf("temps = %d; poul = %d\n", tabValeurs[m-1].temps, tabValeurs[m-1].poul);
                 return m-1;
             }
             else if ( a == tempsIndiquer)
             {
-                printf("temps = %d; poul = %d", tabValeurs[a-1].temps, tabValeurs[a-1].poul);
+                printf("temps = %d; poul = %d\n", tabValeurs[a-1].temps, tabValeurs[a-1].poul);
                 return a-1;
             }
             else if ( b == tempsIndiquer)
             {
-                printf("temps = %d; poul = %d", tabValeurs[b-1].temps, tabValeurs[b-1].poul);
+                printf("temps = %d; poul = %d\n", tabValeurs[b-1].temps, tabValeurs[b-1].poul);
                 return b-1;
             }
 

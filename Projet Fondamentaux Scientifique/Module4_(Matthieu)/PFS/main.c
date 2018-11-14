@@ -6,6 +6,8 @@
 
 int main()
 {
+	system("cls");
+	system("color 0c");
 	int Taille = compterLigne();
 	Valeurs valeurs;
 	lireFichier(valeurs, Taille);
