@@ -2,13 +2,16 @@
 #include <stdlib.h>
 #include "menu.h"
 #include "actions.h"
-
+//
 void afficherMenu(Valeurs *tabValeurs, int Taille)
 {
-    int choix, ouiNon = 1;
-
+    int choice, ouiNon = 1;
+//
+// this while loop is used to relaunch menu to launch another mode if you want 
+//
     while ( ouiNon != 0){
     system("cls");
+// all this "printf" are used to dispaly the menu 
     printf("\n");
     printf("    ----------------------------------------------------- \n");
     printf("   |                                                     |\n");
@@ -21,33 +24,41 @@ void afficherMenu(Valeurs *tabValeurs, int Taille)
     printf("   |   0. quitter le programme                           |\n");
     printf("   |                                                     |\n");
     printf("    ----------------------------------------------------- \n");
-    printf("\n------------------------------------------------------------------------------------------------------------------------\n");
     printf("\n  Entrer votre choix\n");
-    scanf("%i", &choix);
-    switch(choix)
+    scanf("%i", &choice);
+// the switch is used to decide what mode it launch it terms of "choice" value
+    switch(choice)
     {
         case 1:
+// if choice is worth 1, function "tri" is launched 
         tri(tabValeurs, Taille);
         break;
         case 2:
+// if choice is worth 2, function "rechercheDonnee" is launched 
         rechercheDonnee(tabValeurs, Taille, NULL);
         break;
         case 3:
+// if choice is worth 3, function "afficherMoyenne" is launched 
         afficherMoyenne(tabValeurs, Taille);
         break;
         case 4:
+// if choice is worth 4, function "afficherNbDonnees" is launched 
         afficherNbDonnees(tabValeurs, Taille, 1);
         break;
         case 5:
+// if choice is worth 5, function "afficherMinMax" is launched 
         afficherMinMax(tabValeurs, Taille);
         break;
         case 6:
+// if choice is worth 6, function "afficherValeurs" is launched 
         afficherValeurs(tabValeurs, Taille);
         break;
         default:
+// if any value matches with any case, a error message is displayed
+        printf("Aucun mode corespond à votre choix, choississez une autre valeur");
         break;
-
     }
+// it call at the users if they want reuse the program
     printf("Continuez\n");
     printf("1. Oui\n");
     printf("0. Non\n");

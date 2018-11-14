@@ -6,9 +6,8 @@
 
 void lireFichier (Valeurs valeurs, int Taille)
 {
-
 	FILE* fichier = NULL;
-	fichier = fopen("nonTrie.csv", "r");
+	fichier = fopen("nonTrie(100_000).csv", "r");
 
 	if (fichier  != NULL)
 	{
@@ -35,7 +34,7 @@ void lireFichier (Valeurs valeurs, int Taille)
 int compterLigne ()
 {
     FILE* fichier = NULL;
-	fichier = fopen("nonTrie.csv", "r");
+	fichier = fopen("nonTrie(100_000).csv", "r");
 	int compteur = 0;
 	char ligne[20] = "";
 	while ((fgets(ligne, 20,fichier)) != NULL)
