@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1542121501 source:c:\users\arnau\desktop\fichier en c\part 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1542121501 source:c:\users\arnau\desktop\fichier en c\part 3\menu.c
+	"menu.h"
+
+1542121450 c:\users\arnau\desktop\fichier en c\part 3\menu.h
+

@@ -1,0 +1,3 @@
+
+FILE* fichier = NULL
+c
