@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "valeurs.h"
 #include "donnees.h"
 #include "actions.h"
 
@@ -177,62 +176,125 @@ void enregistrerFichier(Valeurs *tabValeurs, int Taille, int a)
     return;
 }
 
-void rechercheDonnee (Valeurs *tabValeurs, int Taille)
+int rechercheDonnee (Valeurs *tabValeurs, int Taille, int t)
 {
-	tCroissant(tabValeurs, Taille);
-    int tempsIndiquer, a=1, b=Taille, m=0;
-    printf("Indiquer la valeur du temps\n");
-    scanf ("%i", &tempsIndiquer);
     tCroissant(tabValeurs, Taille);
-    do
+    int tempsIndiquer, a=0, b=Taille, m=0;
+    if ( t == NULL)
     {
-        m = (a+b)/2;
-        printf("%i   %i\n", b, m);
-        if( m > tempsIndiquer)
+        printf("Indiquer la valeur du temps\n");
+        scanf ("%i", &tempsIndiquer);
+        do
         {
-            b=m;
-        }
-        else if ( m < tempsIndiquer)
-        {
-             a=m;
-        }
-        else if ( m == tempsIndiquer)
-        {
-            printf("temps = %d; poul = %d", tabValeurs[m-1].temps, tabValeurs[m-1].poul);
-            return;
-        }
-        else if ( a == tempsIndiquer)
-        {
-            printf("temps = %d; poul = %d", tabValeurs[a-1].temps, tabValeurs[a-1].poul);
-            return;
-        }
-         else if ( b == tempsIndiquer)
-        {
-            printf("temps = %d; poul = %d", tabValeurs[b-1].temps, tabValeurs[b-1].poul);
-            return;
-        }
+            m = (a+b)/2;
+            if( m > tempsIndiquer)
+            {
+                b=m;
+            }
+            else if ( m < tempsIndiquer)
+            {
+                a=m;
+            }
+            else if ( m == tempsIndiquer)
+            {
+                printf("temps = %d; poul = %d", tabValeurs[m-1].temps, tabValeurs[m-1].poul);
+                return m-1;
+            }
+            else if ( a == tempsIndiquer)
+            {
+                printf("temps = %d; poul = %d", tabValeurs[a-1].temps, tabValeurs[a-1].poul);
+                return a-1;
+            }
+            else if ( b == tempsIndiquer)
+            {
+                printf("temps = %d; poul = %d", tabValeurs[b-1].temps, tabValeurs[b-1].poul);
+                return b-1;
+            }
 
-    }while (b-a>1);
-    printf("temps = %d; poul = %d", tabValeurs[m].temps, tabValeurs[m].poul);
+        }
+        while (b-a>1);
+    }
+    else
+    {
+        tempsIndiquer = t;
+        do
+        {
+            m = (a+b)/2;
+            if( m > tempsIndiquer)
+            {
+                b=m;
+            }
+            else if ( m < tempsIndiquer)
+            {
+                a=m;
+            }
+            else if ( m == tempsIndiquer)
+            {
+                return m-1;
+            }
+            else if ( a == tempsIndiquer)
+            {
+                return a-1;
+            }
+            else if ( b == tempsIndiquer)
+            {
+                return b-1;
+            }
+
+        }
+        while (b-a>1);
+    }
+    return 0;
 }
 
-/*void afficherMoyenne(Valeurs *tabValeurs, int Taille)
+void afficherMoyenne(Valeurs *tabValeurs, int Taille)
 {
-	tCroissant(tabValeurs, Taille);
-	FILE* fichier = NULL;
-	fichier = fopen("trieCroissantTemps", "r");
-	int t1, t2, i, p, sommme, moyenne;
-	printf("Entrer l'intervalle de temps souhaiter :\n");
-	printf("temps de debut \n");
-	scanf("%i", &t1);
-	printf("temps de fin \n");
-	scanf("%i", &t2);
-	for (i = t1; i<=t2; i++)
+    tCroissant(tabValeurs, Taille);
+    int t1, t2, moyenne, index1, somme = 0;
+    printf("Entrer l'intervalle de temps souhaiter :\n");
+    printf("temps de debut \n");
+    scanf("%i", &t1);
+    printf("temps de fin \n");
+    scanf("%i", &t2);
+    index1 = rechercheDonnee(tabValeurs, Taille, t1);
+    while (tabValeurs[index1].temps<=t2)
+    {
+        somme = somme + tabValeurs[index1].poul;
+        index1++;
+    }
+    moyenne = somme / (t2-t1+1);
+    printf("moyenne = %i", moyenne);
+}
+
+void afficherNbDonnees ()
+{
+	int nb = compterLigne();
+	printf("Il y a %i valeurs au total", nb);
+}
+
+void afficherMinMax (Valeurs *tabValeurs, int Taille)
+{
+	int poulMin, poulMax;
+	pCroissant(tabValeurs, Taille);
+	poulMin = tabValeurs[0].poul ;
+	pDecroissant(tabValeurs, Taille);
+	poulMax = tabValeurs[0].poul ;
+	printf("Le poul minimum est : %i\nLe poul maximum est : %i\n", poulMin, poulMax);
+}
+
+void afficherValeurs (Valeurs *tabValeurs, int Taille)
+{
+	int i = 0, j = (Taille)/5, k = (2*Taille)/5, l = (3*Taille)/5, m= (4*Taille)/5;
+	int c = 221;
+
+	while (i<=(Taille-1)/5)
 	{
-		p = tabValeurs[i-1].poul;
-		somme = somme + p;
-		printf("%i %i\n", i, p);
+		printf("%c %i ; %i %c", c, tabValeurs[i].temps, tabValeurs[i].poul, c);
+        printf("%i ; %i %c", tabValeurs[j].temps, tabValeurs[j].poul, c);
+        printf("%i ; %i %c", tabValeurs[k].temps, tabValeurs[k].poul, c);
+        printf("%i ; %i %c", tabValeurs[l].temps, tabValeurs[l].poul, c);
+        printf("%i ; %i %c\n", tabValeurs[m].temps, tabValeurs[m].poul, c);
+        i++, j++, k++, l++, m++;
 	}
-	moyennne = somme / (t2-t1);
-	printf("moyenne = %i", moyenne);
-}*/
+	printf("%c", c);
+}

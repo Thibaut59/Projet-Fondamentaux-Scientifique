@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "menu.h"
-#include "valeurs.h"
 #include "actions.h"
 
 void afficherMenu(Valeurs *tabValeurs, int Taille)
@@ -18,22 +17,25 @@ void afficherMenu(Valeurs *tabValeurs, int Taille)
 
     switch(choix)
     {
-    case 1:
+        case 1:
         tri(tabValeurs, Taille);
         break;
-    case 2:
-    	rechercheDonnee(tabValeurs, Taille);
+        case 2:
+        rechercheDonnee(tabValeurs, Taille, NULL);
         break;
-    case 3:
-//        afficherMoyenne(tabValeurs, Taille);
+        case 3:
+        afficherMoyenne(tabValeurs, Taille);
         break;
-    case 4:
+        case 4:
+        afficherNbDonnees(tabValeurs, Taille, 1);
         break;
-    case 5:
+        case 5:
+        afficherMinMax(tabValeurs, Taille);
         break;
-    case 6:
+        case 6:
+        afficherValeurs(tabValeurs, Taille);
         break;
-    default:
+        default:
         break;
 
     }
