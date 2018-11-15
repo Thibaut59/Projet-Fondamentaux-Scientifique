@@ -9,7 +9,7 @@ for (; millis()<10000;)
 
   Serial.print(millis());
   Serial.print(";");
-    battements = random(2);
+  battements = random(2);
   Serial.println(battements);
   
 }
