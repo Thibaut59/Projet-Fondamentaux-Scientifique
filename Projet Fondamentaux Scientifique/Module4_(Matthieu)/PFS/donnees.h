@@ -6,7 +6,7 @@ typedef struct Valeurs
 	int temps, poul;
 }Valeurs;
 
-void lireFichier(Valeurs valeurs, int Taille);
+void lireFichier(Valeurs valeurs, int taille);
 int compterLigne();
 
 #endif

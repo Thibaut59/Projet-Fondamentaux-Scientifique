@@ -3,17 +3,19 @@
 #include <string.h>
 #include "donnees.h"
 #include "menu.h"
-
-void lireFichier (Valeurs valeurs, int Taille)
+//
+// this function read the file "nonTrie(100_000).csv" and it store the values in structure array 
+void lireFichier (Valeurs valeurs, int taille)
 {
 	FILE* fichier = NULL;
+// fopen to open the file 
 	fichier = fopen("nonTrie(100_000).csv", "r");
-
+// if the file is found then it launch the function 
 	if (fichier  != NULL)
 	{
 		printf("Fichier ouvert\n");
 		int temps, poul, i = 0;
-		Valeurs tabValeurs[Taille];
+		Valeurs tabValeurs[taille];
 		while (fscanf(fichier, "%i ; %i", &temps, &poul)!=EOF)
 		{
 			valeurs.temps = temps;
@@ -21,16 +23,15 @@ void lireFichier (Valeurs valeurs, int Taille)
 			tabValeurs[i] = valeurs;
 			i++;
 		}
-		afficherMenu(tabValeurs, Taille);
+		afficherMenu(tabValeurs, taille);
 		fclose(fichier);
 	}
-
+// else it display error alert 
 	else
 		printf("fichier introuvable\n");
-
 	return;
 }
-
+// this function count all the lines of the file 
 int compterLigne ()
 {
     FILE* fichier = NULL;
