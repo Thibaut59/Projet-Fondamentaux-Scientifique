@@ -6,11 +6,16 @@
 //
 int main()
 {
-	system("cls");// it remove all text in console
-	system("color 0a");// it change font color to black and the background color to red
-	int taille = compterLigne();// it initialize the value of "taille"
-	Valeurs valeurs;// it create a variable named "valeurs" with "Valeurs" type
-	lireFichier(valeurs, taille);// it launch the function "lireFichier"
+// it remove all text in console
+	system("cls");
+// it change font color to black and the background color to red	
+	system("color 0a");
+// it initialize the value of "taille"	
+	int taille = compterLigne();
+// it create a variable named "valeurs" with "Valeurs" type	
+	Valeurs valeurs;
+// it launch the function "lireFichier"	
+	lireFichier(valeurs, taille);
 //
 	return 0;
 }
