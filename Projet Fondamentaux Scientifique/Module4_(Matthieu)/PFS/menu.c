@@ -22,6 +22,7 @@ void afficherMenu(Valeurs *tabValeurs, int taille)
         printf("   |   4. afficher le nombre de valeurs                  |\n");
         printf("   |   5. afficher le minimum est le maximum             |\n");
         printf("   |   6. afficher les valeurs                           |\n");
+        printf("   |   7. controler les LEDs                             |\n");
         printf("   |   0. quitter le programme                           |\n");
         printf("   |                                                     |\n");
         printf("    ----------------------------------------------------- \n");
@@ -54,6 +55,10 @@ void afficherMenu(Valeurs *tabValeurs, int taille)
         case 6:
 // if choice is worth 6, function "afficherValeurs" is launched
             afficherValeurs(tabValeurs, taille);
+            break;
+        case 7:
+// if choice is worth 7, function "menuLed" is launched
+            menuLed();
             break;
         case 0:
             return;
