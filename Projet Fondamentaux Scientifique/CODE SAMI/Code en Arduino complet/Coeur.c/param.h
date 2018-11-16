@@ -115,7 +115,7 @@ digitalWrite(11,LOW);
 void allumagecomplet()
 {
   
-delay (400);
+delay (800);
   digitalWrite(6, HIGH);
   
  digitalWrite(7, HIGH);
@@ -136,7 +136,7 @@ digitalWrite(4, HIGH);
 
  digitalWrite(5,HIGH);
 
- delay (400);
+ delay (800);
   digitalWrite(6, LOW);
   
  digitalWrite(7, LOW);
@@ -157,28 +157,6 @@ digitalWrite(4, LOW);
 
  digitalWrite(5,LOW);
 
-
-  
-delay (400);
-  digitalWrite(6, HIGH);
-  
- digitalWrite(7, HIGH);
-
- digitalWrite(8, HIGH);
-  
- digitalWrite(9, HIGH);
-
-digitalWrite(10, HIGH);
-
-   digitalWrite(11, HIGH);
- 
-   digitalWrite(2,HIGH);
- 
-digitalWrite(3, HIGH);
-  
-digitalWrite(4, HIGH);
-
- digitalWrite(5,HIGH);
 
 }
 
