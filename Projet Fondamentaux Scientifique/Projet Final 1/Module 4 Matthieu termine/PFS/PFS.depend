@@ -1,0 +1,76 @@
+# depslib dependency file v1.0
+1542267575 source:c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\actions.c
+	<stdio.h>
+	<stdlib.h>
+	"donnees.h"
+	"actions.h"
+
+1542268049 source:c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"donnees.h"
+	"actions.h"
+
+1542265219 c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\menu.h
+	"donnees.h"
+
+1542265178 c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\donnees.h
+
+1542265195 c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\actions.h
+
+1542266739 source:c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"actions.h"
+
+1542268874 source:c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\donnees.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"donnees.h"
+	"menu.h"
+
+1542198654 c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\valeurs.h
+
+1542115868 c:\users\matthieu dewaele\onedrive - association cesi viacesi mail\exia\projet\pfs\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"valeurs.h"
+	"actions.h"
+
+1542269534 source:c:\users\thiba\desktop\projet final 1\module 4 matthieu termine\pfs\actions.c
+	<stdio.h>
+	<stdlib.h>
+	"donnees.h"
+	"actions.h"
+
+1542269534 c:\users\thiba\desktop\projet final 1\module 4 matthieu termine\pfs\donnees.h
+
+1542269534 c:\users\thiba\desktop\projet final 1\module 4 matthieu termine\pfs\actions.h
+
+1542269534 source:c:\users\thiba\desktop\projet final 1\module 4 matthieu termine\pfs\donnees.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"donnees.h"
+	"menu.h"
+
+1542269534 c:\users\thiba\desktop\projet final 1\module 4 matthieu termine\pfs\menu.h
+	"donnees.h"
+
+1542269534 source:c:\users\thiba\desktop\projet final 1\module 4 matthieu termine\pfs\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"donnees.h"
+	"actions.h"
+
+1542269866 source:c:\users\thiba\desktop\projet final 1\module 4 matthieu termine\pfs\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"actions.h"
+
