@@ -1,5 +1,5 @@
 int analogPin=0;
-bool b;
+bool passage;
 
 float battement;
 float battement_moyen;
@@ -28,12 +28,12 @@ float tension=valeur * (5.0/1023.0); //opération pour changer l'échelle (avoir
  if (tension>=1.5)  //Si la pin A0 récupére une tension supérieur à 1.5 V alors...
  {
 
-  if (b == false) //b sert à ce que battement et battement_moyen ne s'incrémente qu'une fois quand tension >= 1.5
+  if (passage == false) //b sert à ce que battement et battement_moyen ne s'incrémente qu'une fois quand tension >= 1.5
   {
     
     battement++;  //battement toutes les 10 secondes
     battement_moyen++;  //battement moyen pour tout le temps
-    b=true;
+    passage=true;
     Serial.println("boum");
     
     delay(20);
@@ -42,7 +42,7 @@ float tension=valeur * (5.0/1023.0); //opération pour changer l'échelle (avoir
  }
  else
  {
-  b=false;  //les battements peuvent de nuveau s'incrémenter
+  passage=false;  //les battements peuvent de nuveau s'incrémenter
   delay(20);
  }
 
