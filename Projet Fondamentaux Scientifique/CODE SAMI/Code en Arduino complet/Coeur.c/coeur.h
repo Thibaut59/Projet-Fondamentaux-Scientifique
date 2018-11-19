@@ -1,5 +1,5 @@
  //variables
- int c=5;
+ int c=3;
  
 void setup() {
   pinMode(2,OUTPUT);

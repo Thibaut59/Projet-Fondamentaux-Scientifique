@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1542186897 source:c:\users\arnau\desktop\fichier en c\part 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"GenerationCode.h"
+
+1542358638 source:c:\users\arnau\desktop\fichier en c\part 3\menu.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"GenerationCode.h"
+
+1542121450 c:\users\arnau\desktop\fichier en c\part 3\menu.h
+
+1542358532 source:c:\users\arnau\desktop\fichier en c\part 3\generationcode.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"GenerationCode.h"
+
+1542272840 c:\users\arnau\desktop\fichier en c\part 3\generationcode.h
+
